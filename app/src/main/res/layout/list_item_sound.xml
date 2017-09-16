@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.bignerdranch.android.beatbox.SoundViewModel">
@@ -16,7 +15,8 @@
         android:layout_height="120dp"
         android:orientation="vertical"
         android:text="@{viewModel.title}"
-        tools:text="Sound name">
+        tools:text="Sound name"
+        android:onClick="@{() -> viewModel.onButtonClicked()}">
     </Button>
 
 </layout>
