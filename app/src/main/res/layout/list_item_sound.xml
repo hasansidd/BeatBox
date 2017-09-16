@@ -4,19 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.bignerdranch.android.beatbox.SoundViewModel">
         </variable>
     </data>
 
-    <Button
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:orientation="vertical"
-        android:text="@{viewModel.title}"
-        tools:text="Sound name"
-        android:onClick="@{() -> viewModel.onButtonClicked()}">
-    </Button>
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:onClick="@{() -> viewModel.onButtonClicked()}"
+            android:orientation="vertical"
+            android:text="@{viewModel.title}"
+            tools:text="Sound name">
+        </Button>
+    </FrameLayout>
 </layout>
